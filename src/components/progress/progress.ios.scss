@@ -1,0 +1,41 @@
+@import "../../themes/ionic.globals.ios";
+
+// iOS Progress
+// --------------------------------------------------
+
+/// @prop - Background color of the progress
+$progress-ios-background-color:           color($colors-ios, primary) !default;
+
+/// @prop - Background color of the progress buffer
+$progress-ios-buffer-background-color:    lighten($progress-ios-background-color, 20%) !default;
+
+
+.progress-ios .progress-bar,
+.progress-ios .progress-animatable {
+  background-color: $progress-ios-background-color;
+}
+
+.progress-ios .progress-buffer-circles {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)), linear-gradient(to right, $progress-ios-background-color, $progress-ios-background-color);
+}
+
+.progress-ios .progress-buffer {
+  background-color: $progress-ios-buffer-background-color;
+}
+
+
+// Generate iOS Progress Colors
+// --------------------------------------------------
+
+@each $color-name, $color-base, $color-contrast in get-colors($colors-ios) {
+
+  .progress-ios-#{$color-name} .progress-bar,
+  .progress-ios-#{$color-name} .progress-animatable {
+    background-color: $color-base;
+  }
+
+  .progress-ios-#{$color-name} .progress-buffer {
+    background-color: lighten($color-base, 20%);
+  }
+
+}
