@@ -1,19 +1,5 @@
-import {
-  Component,
-  Element,
-  Event,
-  EventEmitter,
-  Listen,
-  Prop,
-  State
-} from '@stencil/core';
-import {
-  AnimationBuilder,
-  Animation,
-  AnimationController,
-  Config,
-  CssClassMap
-} from '../../index';
+import { Component, Element, Event, EventEmitter, Listen, Prop, State } from '@stencil/core';
+import { AnimationBuilder, Animation, AnimationController, Config, CssClassMap } from '../../index';
 
 import { createThemedClasses } from '../../utils/theme';
 
@@ -43,11 +29,8 @@ export class Toast {
   @Event() private ionToastDidDismiss: EventEmitter;
   @Event() private ionToastDidUnload: EventEmitter;
 
-  @Prop({ connect: 'ion-animation-controller' })
-  animationCtrl: AnimationController;
-
-  @Prop({ context: 'config' })
-  config: Config;
+  @Prop({ connect: 'ion-animation-controller' }) animationCtrl: AnimationController;
+  @Prop({ context: 'config' }) config: Config;
 
   @Prop() message: string;
   @Prop() cssClass: string;
