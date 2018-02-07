@@ -82,7 +82,18 @@ import { isArray, isDefined, isFunction, isObject } from '../util/util';
  * Any value can be added to config, and looked up at a later in any component.
  *
  * ```js
- * config.set('ios', 'favoriteColor', 'green');
+ * 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ ('ios', 'favoriteColor', 'green');
  *
  * // from any page in your app:
  * config.get('favoriteColor'); // 'green' when iOS
